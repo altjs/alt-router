@@ -5,7 +5,7 @@ Setup
 ```js
 import AltRouter from 'alt-router'
 import React from 'react'
-import createBrowserHistory from 'history/lib/createBrowserHistory'
+import { Router, Route, browserHistory } from 'react-router'
 
 // your alt instance
 import alt from '../alt'
@@ -18,7 +18,7 @@ const routes = (
 )
 
 React.render((
-  <AltRouter flux={alt} history={createBrowserHistory()} routes={routes} />
+  <AltRouter flux={alt} history={browserHistory} routes={routes} />
 ), document.getElementById('root'))
 ```
 
