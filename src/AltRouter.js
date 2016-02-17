@@ -57,13 +57,13 @@ const makeHistoryStore = history => ({
 
   push(data) {
     const { state, pathname, query } = data
-    history.pushState(state, pathname, query)
+    history.push(state, pathname, query)
     this.setState(data)
   },
 
   replace(data) {
     const { state, pathname, query } = data
-    history.replaceState(state, pathname, query)
+    history.replace(state, pathname, query)
     this.setState(data)
   },
 
